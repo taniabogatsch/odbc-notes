@@ -15,3 +15,8 @@ In CLion, I added `DBUILD_ODBC_DRIVER=1` to `CLion - Settings - Build,Execution,
 Then, select `test_odbc` from the `Run/Debug Configurations` to run the tests. To run a specific test, click on `test_odbc`, then `Edit Configurations` and add the name of the test as the program's argument, e.g. `"Basic ODBC usage"`.
 
 Alternatively, [here](https://github.com/duckdb/duckdb/tree/master/tools/odbc) are more instructions on how to use/fix ODBC (tests).
+
+### Open Questions
+
+- What is an `SQLHANDLE`?
+- What is a `HSTMT`? I am assuming that this is short for handle-statement?
