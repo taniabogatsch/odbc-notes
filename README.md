@@ -16,7 +16,22 @@ Then, select `test_odbc` from the `Run/Debug Configurations` to run the tests. T
 
 Alternatively, [here](https://github.com/duckdb/duckdb/tree/master/tools/odbc) are more instructions on how to use/fix ODBC (tests).
 
+## FAQ
+
+What are [handles](https://learn.microsoft.com/en-us/sql/odbc/reference/develop-app/handles?view=sql-server-ver16)
+
+- `SQLHANDLE`: can be any handle
+- there are five types of handles, e.g., statement handles
+-  functions can therefore contain the specific type of the handle: `SQLHANDLE handle, SQLSMALLINT handle_type`
+- `HSTMT`: [statement handle](https://learn.microsoft.com/en-us/sql/odbc/reference/develop-app/statement-handles?view=sql-server-ver16)
+
+
+
 ### Open Questions
 
 - What is an `SQLHANDLE`?
 - What is a `HSTMT`? I am assuming that this is short for handle-statement?
+
+We often use handles, which are mostly pointers to memory locations.
+- `HSTMT`: points to the metadata and the data of a statement
+- `SQLHANDLE`: points to the data of a statement
